@@ -21,7 +21,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.arithmatex:
-      generic: false
+      generic: true
   - pymdownx.snippets:          # 注意这里加了冒号
       base_path: docs           # 这一行告诉插件：所有小剪刀路径都从 docs 文件夹开始算！
 
