@@ -43,9 +43,8 @@
     $$
     请利用这一尾部概率结论，以及 $0\le X\le n$，证明
     $$
-    \mathbb{E}[X] = O\!\left(\frac{\log n}{\log\log n}\right).
+    \mathbb{E}[X] = O\left(\frac{\log n}{\log\log n}\right).
     $$
-    
 === "English"
     In the main text we proved that when $n$ balls are thrown independently and uniformly into $n$ bins, the maximum load
     $$
@@ -57,9 +56,8 @@
     $$
     Use this tail bound together with $0\le X\le n$ to prove
     $$
-    \mathbb{E}[X] = O\!\left(\frac{\log n}{\log\log n}\right).
+    \mathbb{E}[X] = O\left(\frac{\log n}{\log\log n}\right).
     $$
-    
 --8<-- "solutions/chapter_01/exercises/exercise_max_load.md"
 
 ### 精确的代价 (Cost of Exactness)
@@ -83,7 +81,7 @@
     
     请证明：对任意给定的允许出错概率上限 $\delta\in(0,1)$，只要
     $$
-    N \ge 8\ln\!\left(\frac{1}{\delta}\right),
+    N \ge 8\ln\left(\frac{1}{\delta}\right),
     $$
     这种多数表决策略就能以至少 $1-\delta$ 的概率给出正确投资决策。
     
@@ -92,7 +90,7 @@
     
     Prove that for any target error level $\delta\in(0,1)$, if
     $$
-    N \ge 8\ln\!\left(\frac{1}{\delta}\right),
+    N \ge 8\ln\left(\frac{1}{\delta}\right),
     $$
     then majority vote outputs the correct decision with probability at least $1-\delta$.
     
@@ -110,13 +108,12 @@
     	$$
     2. 利用上述结论，证明标准高斯尾部概率 $\Pr(|X|\ge t)$（$t>0$）的上下界，并说明当 $t$ 足够大时，
     	$$
-    	\Pr(|X|\ge t)=\Theta\!\left(t^{-1}e^{-t^2/2}\right).
+    	\Pr(|X|\ge t)=\Theta\left(t^{-1}e^{-t^2/2}\right).
     	$$
     	进一步证明当 $t\to+\infty$ 时，
     	$$
     	\Pr(|X|\ge t)\sim \sqrt{\frac{2}{\pi}}\,t^{-1}e^{-t^2/2}.
     	$$
-    
 === "English"
     Let $X\sim\mathcal{N}(0,1)$ be a standard Gaussian random variable.
     
@@ -128,13 +125,12 @@
     	$$
     2. Use the above to derive upper and lower bounds for $\Pr(|X|\ge t)$ ($t>0$), and explain why for large $t$,
     	$$
-    	\Pr(|X|\ge t)=\Theta\!\left(t^{-1}e^{-t^2/2}\right).
+    	\Pr(|X|\ge t)=\Theta\left(t^{-1}e^{-t^2/2}\right).
     	$$
     	Further prove that as $t\to+\infty$,
     	$$
     	\Pr(|X|\ge t)\sim \sqrt{\frac{2}{\pi}}\,t^{-1}e^{-t^2/2}.
     	$$
-    
 --8<-- "solutions/chapter_01/exercises/exercise_gaussian_concentration.md"
 
 ### 纠缠的极值 (Entangled Extremes)
@@ -147,7 +143,6 @@
     $$
     \mathbb{E}[Z]\le \sqrt{2\log n}.
     $$
-    
 === "English"
     Let $X_1,\dots,X_n$ be $n$ standard Gaussian random variables (not necessarily independent), i.e., $X_i\sim\mathcal{N}(0,1)$ for all $i\in[n]$. Define
     $$
@@ -157,20 +152,19 @@
     $$
     \mathbb{E}[Z]\le \sqrt{2\log n}.
     $$
-    
 --8<-- "solutions/chapter_01/exercises/exercise_entangled_extremes.md"
 
 ### 次高斯分布初探 (Introduction to Sub-Gaussian Distributions)
 === "中文"
     如果均值为 $0$ 的随机变量 $X$ 满足：对任意 $\lambda\in\mathbb{R}$，
     $$
-    \mathbb{E}\big[e^{\lambda X}\big]\le \exp\!\left(\frac{\lambda^2\sigma^2}{2}\right),
+    \mathbb{E}\big[e^{\lambda X}\big]\le \exp\left(\frac{\lambda^2\sigma^2}{2}\right),
     $$
     则称 $X$ 是参数为 $\sigma^2$ 的次高斯随机变量。
     
     1. （集中性）请模仿正文中切尔诺夫界的证明，证明对任意 $t>0$，
     	$$
-    	\Pr(X\ge t)\le \exp\!\left(-\frac{t^2}{2\sigma^2}\right).
+    	\Pr(X\ge t)\le \exp\left(-\frac{t^2}{2\sigma^2}\right).
     	$$
     2. （可加性）若 $X_1,X_2$ 相互独立、均值为 $0$，参数分别为 $\sigma_1^2,\sigma_2^2$，证明 $X_1+X_2$ 也是次高斯，且参数为 $\sigma_1^2+\sigma_2^2$。
     3. （有界变量即次高斯）结合霍夫丁引理，说明若 $\mathbb{E}[X]=0$ 且 $X\in[a,b]$，那么 $X$ 是参数
@@ -182,35 +176,33 @@
 === "English"
     If a zero-mean random variable $X$ satisfies, for all $\lambda\in\mathbb{R}$,
     $$
-    \mathbb{E}\big[e^{\lambda X}\big]\le \exp\!\left(\frac{\lambda^2\sigma^2}{2}\right),
+    \mathbb{E}\big[e^{\lambda X}\big]\le \exp\left(\frac{\lambda^2\sigma^2}{2}\right),
     $$
     then $X$ is called sub-Gaussian with parameter $\sigma^2$.
     
     1. (Concentration) Following the Chernoff-bound proof in the text, prove that for any $t>0$,
     	$$
-    	\Pr(X\ge t)\le \exp\!\left(-\frac{t^2}{2\sigma^2}\right).
+    	\Pr(X\ge t)\le \exp\left(-\frac{t^2}{2\sigma^2}\right).
     	$$
     2. (Additivity) If $X_1$ and $X_2$ are independent sub-Gaussian random variables with mean $0$ and parameters $\sigma_1^2$ and $\sigma_2^2$, prove that $X_1+X_2$ is sub-Gaussian with parameter $\sigma_1^2+\sigma_2^2$.
     3. (Bounded implies sub-Gaussian) Using Hoeffding's lemma, show that if $\mathbb{E}[X]=0$ and $X\in[a,b]$, then $X$ is sub-Gaussian with parameter
     	$$
     	\sigma^2=\frac{(b-a)^2}{4}.
     	$$
-    
 --8<-- "solutions/chapter_01/exercises/exercise_sub_gaussian_intro.md"
 
 ### 次指数分布初探 (Introduction to Sub-Exponential Distributions)
 === "中文"
     称随机变量 $X$ 为参数 $(\nu,\alpha)$ 的次指数（sub-exponential）随机变量（$\nu,\alpha>0$），如果其中心化后的矩生成函数满足：对任意 $|\lambda|\le 1/\alpha$，
     $$
-    \mathbb{E}\big[e^{\lambda(X-\mathbb{E}[X])}\big]\le \exp\!\left(\frac{\lambda^2\nu}{2}\right).
+    \mathbb{E}\big[e^{\lambda(X-\mathbb{E}[X])}\big]\le \exp\left(\frac{\lambda^2\nu}{2}\right).
     $$
-    
     1. （集中性）请证明：对任意 $t\ge0$，
     	$$
     	\Pr\big(X-\mathbb{E}[X]\ge t\big)\le
     	\begin{cases}
-    	\exp\!\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\\[2mm]
-    	\exp\!\left(-\dfrac{t}{2\alpha}\right), & t\in\left(\dfrac{\nu}{\alpha},\infty\right).
+        \exp\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\\
+        \exp\left(-\dfrac{t}{2\alpha}\right), & t\in\left(\dfrac{\nu}{\alpha},\infty\right).
     	\end{cases}
     	$$
     2. （可加性）设 $X_1,\dots,X_N$ 相互独立，且每个 $X_i$ 都是参数 $(\nu_i,\alpha_i)$ 的次指数随机变量。证明：对任意常数 $w_1,\dots,w_N\in\mathbb{R}$，加权和 $\sum_{i=1}^N w_iX_i$ 也是次指数随机变量，参数为
@@ -225,23 +217,21 @@
     	$$
     	\Pr\big(S_N-\mathbb{E}[S_N]\ge t\big)\le
     	\begin{cases}
-    	\exp\!\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\\[2mm]
-    	\exp\!\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), & \text{其他情况}.
+        \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\\
+        \exp\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), & \text{其他情况}.
     	\end{cases}
     	$$
-    
 === "English"
     A random variable $X$ is called sub-exponential with parameters $(\nu,\alpha)$ (where $\nu,\alpha>0$) if its centered moment generating function satisfies, for all $|\lambda|\le 1/\alpha$,
     $$
-    \mathbb{E}\big[e^{\lambda(X-\mathbb{E}[X])}\big]\le \exp\!\left(\frac{\lambda^2\nu}{2}\right).
+    \mathbb{E}\big[e^{\lambda(X-\mathbb{E}[X])}\big]\le \exp\left(\frac{\lambda^2\nu}{2}\right).
     $$
-    
     1. (Concentration) Prove that for any $t\ge0$,
     	$$
     	\Pr\big(X-\mathbb{E}[X]\ge t\big)\le
     	\begin{cases}
-    	\exp\!\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\\[2mm]
-    	\exp\!\left(-\dfrac{t}{2\alpha}\right), & t\in\left(\dfrac{\nu}{\alpha},\infty\right).
+        \exp\left(-\dfrac{t^2}{2\nu}\right), & t\in\left[0,\dfrac{\nu}{\alpha}\right],\\
+        \exp\left(-\dfrac{t}{2\alpha}\right), & t\in\left(\dfrac{\nu}{\alpha},\infty\right).
     	\end{cases}
     	$$
     2. (Additivity) Suppose $X_1,\dots,X_N$ are independent and each $X_i$ is sub-exponential with parameters $(\nu_i,\alpha_i)$. Prove that for any constants $w_1,\dots,w_N\in\mathbb{R}$, the weighted sum $\sum_{i=1}^N w_iX_i$ is sub-exponential with parameters
@@ -256,11 +246,10 @@
     	$$
     	\Pr\big(S_N-\mathbb{E}[S_N]\ge t\big)\le
     	\begin{cases}
-    	\exp\!\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\\[2mm]
-    	\exp\!\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), & \text{otherwise}.
+        \exp\left(-\dfrac{t^2}{2\sum_{i=1}^N w_i^2\nu_i}\right), & t\in\left[0,\dfrac{\sum_{i=1}^N w_i^2\nu_i}{\max_{i\in[N]}|w_i|\alpha_i}\right],\\
+        \exp\left(-\dfrac{t}{2\max_{i\in[N]}|w_i|\alpha_i}\right), & \text{otherwise}.
     	\end{cases}
     	$$
-    
 --8<-- "solutions/chapter_01/exercises/exercise_sub_exponential_intro.md"
 
 ### 退而求其次 (A Weaker Concentration Alternative)
@@ -269,7 +258,6 @@
     $$
     \mathbb{E}[X_iX_j]=\mathbb{E}[X_i]\mathbb{E}[X_j].
     $$
-    
     1. 假设存在常数 $C<+\infty$ 使得对所有 $i$ 都有 $\mathrm{Var}(X_i)\le C$。请证明对任意 $t>0$，
     	$$
     	\Pr\left(\left|\frac{1}{n}\sum_{i=1}^n X_i\right|\ge t\right)\le \frac{C}{nt^2}.
@@ -278,13 +266,11 @@
     	$$
     	\frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu.
     	$$
-    
 === "English"
     Let $X_1,X_2,\dots$ be centered random variables ($\mathbb{E}[X_i]=0$) that are pairwise uncorrelated, i.e., for any $i\ne j$,
     $$
     \mathbb{E}[X_iX_j]=\mathbb{E}[X_i]\mathbb{E}[X_j].
     $$
-    
     1. Assume there exists a constant $C<+\infty$ such that $\mathrm{Var}(X_i)\le C$ for all $i$. Prove that for any $t>0$,
     	$$
     	\Pr\left(\left|\frac{1}{n}\sum_{i=1}^n X_i\right|\ge t\right)\le \frac{C}{nt^2}.
@@ -293,7 +279,6 @@
     	$$
     	\frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu.
     	$$
-    
 --8<-- "solutions/chapter_01/exercises/exercise_weaker_concentration.md"
 
 ### 咫尺天涯 (So Close, Yet So Far)
@@ -304,7 +289,6 @@
     $$
     X_v=\langle U,v\rangle \pmod 2.
     $$
-    
     1. 请证明这 $n$ 个随机变量 $X_v$ 都服从 $\{0,1\}$ 上的均匀分布，且它们两两独立。
     2. 请证明：对任何由 $\{X_v\}_{v\ne\mathbf{0}}$ 生成的事件 $A$（即 $A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})$），其概率 $\Pr(A)$ 要么为 $0$，要么至少为 $\dfrac{1}{n+1}$。
     
@@ -315,7 +299,6 @@
     $$
     X_v=\langle U,v\rangle \pmod 2.
     $$
-    
     1. Prove that these $n$ random variables $X_v$ are each uniform on $\{0,1\}$ and are pairwise independent.
     2. Prove that for any event $A$ generated by $\{X_v\}_{v\ne\mathbf{0}}$ (i.e., $A\in\sigma(\{X_v\}_{v\ne\mathbf{0}})$), the probability $\Pr(A)$ is either $0$ or at least $\dfrac{1}{n+1}$.
     

@@ -4,7 +4,7 @@
 
 ### 双选之力 (Power of Two Choices)
 === "中文"
-    在投球入箱模型中，将 $n$ 个球独立均匀随机地投入 $n$ 个箱子，最大负载高概率是 $O\!\left(\frac{\log n}{\log\log n}\right)$。现在改变规则：每次投球时，独立均匀随机挑选两个不同箱子，把球放入这两个箱子中当前球更少的那个（若一样多则任意选）。
+	在投球入箱模型中，将 $n$ 个球独立均匀随机地投入 $n$ 个箱子，最大负载高概率是 $O\left(\frac{\log n}{\log\log n}\right)$。现在改变规则：每次投球时，独立均匀随机挑选两个不同箱子，把球放入这两个箱子中当前球更少的那个（若一样多则任意选）。
     
     令 $\nu_k$ 表示投入全部 $n$ 个球后，负载至少为 $k$ 的箱子数量（$k\le n$）。
     
@@ -19,7 +19,7 @@
     	请解出 $\beta_{k+6}$ 的通项公式，并据此证明只需 $k^*=O(\log\log n)$ 次迭代，上界 $\beta_{k^*}$ 就会下降到 $O(\log n)$ 级别。
     
 === "English"
-    In the balls-into-bins model, when $n$ balls are independently and uniformly thrown into $n$ bins, the maximum load is typically $O\!\left(\frac{\log n}{\log\log n}\right)$. Now change the rule: for each ball, pick two distinct bins independently and uniformly at random, and place the ball into the currently less loaded one (break ties arbitrarily).
+	In the balls-into-bins model, when $n$ balls are independently and uniformly thrown into $n$ bins, the maximum load is typically $O\left(\frac{\log n}{\log\log n}\right)$. Now change the rule: for each ball, pick two distinct bins independently and uniformly at random, and place the ball into the currently less loaded one (break ties arbitrarily).
     
     Let $\nu_k$ be the number of bins with load at least $k$ after all $n$ balls are placed ($k\le n$).
     
@@ -59,11 +59,11 @@
     2. 对固定 $t$ 和次优臂 $i$（$t\ge n+1, i\ne1$），证明事件 $A$ 与事件 $B$ 的概率都不超过 $t^{-4}$。
     3. 证明每个次优臂被拉动的期望次数
     	$$
-    	\mathbb{E}[T_i(T)] = O\!\left(\frac{\ln T}{\Delta_i^2}\right),
+	    \mathbb{E}[T_i(T)] = O\left(\frac{\ln T}{\Delta_i^2}\right),
     	$$
     	并据此证明 UCB 的期望懊悔上界为
     	$$
-    	O\!\left(\sqrt{nT\ln T}\right).
+	    O\left(\sqrt{nT\ln T}\right).
     	$$
     4. 解释直观上为什么 UCB 往往优于 ETC。
     
@@ -90,11 +90,11 @@
     2. For fixed $t$ and suboptimal arm $i$ ($t\ge n+1, i\ne1$), prove that both $\Pr(A)$ and $\Pr(B)$ are at most $t^{-4}$.
     3. Prove
     	$$
-    	\mathbb{E}[T_i(T)] = O\!\left(\frac{\ln T}{\Delta_i^2}\right)
+	    \mathbb{E}[T_i(T)] = O\left(\frac{\ln T}{\Delta_i^2}\right)
     	$$
     	for each suboptimal arm, and deduce the UCB expected regret bound
     	$$
-    	O\!\left(\sqrt{nT\ln T}\right).
+	    O\left(\sqrt{nT\ln T}\right).
     	$$
     4. Give an intuitive explanation for why UCB often outperforms ETC.
     
@@ -115,12 +115,12 @@
     	$$
     	则淘汰 $i$。定义事件
     	$$
-    	E=\left\{\forall i\in[n],\forall r\ge1:\ |\hat\mu_{i,r}-\mu_i|<C_r\right\}.
+	    E=\bigl\{\forall i\in[n],\forall r\ge1:\ \lvert\hat\mu_{i,r}-\mu_i\rvert<C_r\bigr\}.
     	$$
     	请证明 $\Pr(E)\ge1-\delta$，并据此说明算法成功概率至少 $1-\delta$。
     3. 设最优臂编号为 $1$（玩家并不知道），证明：以至少 $1-\delta$ 的概率，该算法的拉动次数不超过
     	$$
-    	O\!\left(\sum_{i\ne1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta\Delta_i}\right).
+	    O\left(\sum_{i\ne1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta\Delta_i}\right).
     	$$
     4. 讨论连续淘汰与均匀探索的优劣。
     
@@ -138,12 +138,12 @@
     	$$
     	Define
     	$$
-    	E=\left\{\forall i\in[n],\forall r\ge1:\ |\hat\mu_{i,r}-\mu_i|<C_r\right\}.
+	    E=\bigl\{\forall i\in[n],\forall r\ge1:\ \lvert\hat\mu_{i,r}-\mu_i\rvert<C_r\bigr\}.
     	$$
     	Prove $\Pr(E)\ge1-\delta$, and conclude that the algorithm succeeds with probability at least $1-\delta$.
     3. Assume the optimal arm is indexed by $1$ (unknown to the learner). Prove that with probability at least $1-\delta$, the number of pulls is at most
     	$$
-    	O\!\left(\sum_{i\ne1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta\Delta_i}\right).
+	    O\left(\sum_{i\ne1}\frac{1}{\Delta_i^2}\log\frac{n}{\delta\Delta_i}\right).
     	$$
     4. Discuss advantages and disadvantages of successive elimination versus uniform exploration.
     
@@ -153,7 +153,7 @@
 === "中文"
     在公平硬币检验中，我们知道用
     $$
-    T=O\!\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
+	T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     $$
     个样本可区分 $\mathrm{Ber}(1/2)$ 与 $\mathrm{Ber}(1/2+\varepsilon)$，且正确率至少 $1-\delta$。本题要求证明该量级最优。
     
@@ -192,7 +192,7 @@
     3. 证明 $\Pr_1(C)>\delta$，并据此说明满足要求且保证 $\mathbb{E}_0[T]\le L$ 的确定性算法不存在。
     4. 若 $\mathcal{A}$ 是随机算法（可使用额外随机数），下界
     	$$
-    	\mathbb{E}_0[T]=\Omega\!\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
+    	\mathbb{E}_0[T]=\Omega\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     	$$
     	是否仍成立？为什么？
     5. 若你了解 KL 散度，请计算单次抛掷下这两种伯努利分布的 KL 散度，并直观解释为什么需要与 $1/\varepsilon^2$ 同阶的信息量才能把两者区分开。
@@ -200,7 +200,7 @@
 === "English"
     In fair-coin testing, we know that
     $$
-    T=O\!\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
+	T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     $$
     samples suffice to distinguish $\mathrm{Ber}(1/2)$ from $\mathrm{Ber}(1/2+\varepsilon)$ with success probability at least $1-\delta$. This problem asks you to prove this rate is optimal up to constants.
     
@@ -239,7 +239,7 @@
     3. Prove $\Pr_1(C)>\delta$, and conclude that no deterministic algorithm satisfying the required guarantee can have $\mathbb{E}_0[T]\le L$.
     4. If $\mathcal{A}$ is randomized (with extra internal randomness), does the lower bound
     	$$
-    	\mathbb{E}_0[T]=\Omega\!\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
+    	\mathbb{E}_0[T]=\Omega\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     	$$
     	still hold? Why?
     5. If you know KL divergence, compute the KL divergence between the two Bernoulli distributions per toss, and explain intuitively why distinguishing them requires information of order $1/\varepsilon^2$.
@@ -299,7 +299,6 @@
     $$
     d_{\mathrm{TV}}(p,q)=\frac12\sum_{i=1}^n|p_i-q_i|.
     $$
-    
     令 $\mu$ 为均匀分布，$\pi$ 为未知分布。已知 $\pi$ 要么等于 $\mu$，要么满足 $d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon$（$\varepsilon\in(0,1/2)$）。目标是用尽量少样本做判别。
     
     1. 令
@@ -347,7 +346,6 @@
     $$
     d_{\mathrm{TV}}(p,q)=\frac12\sum_{i=1}^n|p_i-q_i|.
     $$
-    
     Let $\mu$ be uniform on $\Omega$, and $\pi$ be an unknown distribution. Assume either $\pi=\mu$, or $d_{\mathrm{TV}}(\pi,\mu)\ge\varepsilon$ where $\varepsilon\in(0,1/2)$. The goal is to decide which case holds using as few samples as possible.
     
     1. Define
@@ -402,10 +400,9 @@
     $$
     d_{\mathrm{TV}}(p,\hat p)=\frac12\sum_{i=1}^n|p_i-\hat p_i|\le\varepsilon.
     $$
-    
     1. 先考虑 $n=2$。请设计一个算法，使用
     	$$
-    	T=O\!\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
+	    T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     	$$
     	个样本，以至少 $1-\delta$ 概率找到满足 $d_{\mathrm{TV}}(p,\hat p)\le\varepsilon$ 的 $\hat p$，并给出分析。
     2. 对一般 $n\ge2$，证明
@@ -426,7 +423,7 @@
     	$$
     4. 证明：使用上述经验分布构造，只需
     	$$
-    	T=O\!\left(\frac{1}{\varepsilon^2}\left(n+\log\frac1\delta\right)\right)
+	    T=O\left(\frac{1}{\varepsilon^2}\left(n+\log\frac1\delta\right)\right)
     	$$
     	个样本，就能以至少 $1-\delta$ 概率满足 $d_{\mathrm{TV}}(p,\hat p)\le\varepsilon$。
     
@@ -439,10 +436,9 @@
     $$
     d_{\mathrm{TV}}(p,\hat p)=\frac12\sum_{i=1}^n|p_i-\hat p_i|\le\varepsilon.
     $$
-    
     1. First consider $n=2$. Design an algorithm using
     	$$
-    	T=O\!\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
+	    T=O\left(\frac{1}{\varepsilon^2}\log\frac{1}{\delta}\right)
     	$$
     	samples, which outputs $\hat p$ satisfying $d_{\mathrm{TV}}(p,\hat p)\le\varepsilon$ with probability at least $1-\delta$, and analyze it.
     2. For general $n\ge2$, prove
@@ -463,7 +459,7 @@
     	$$
     4. Prove that with the above empirical estimator, it is enough to take
     	$$
-    	T=O\!\left(\frac{1}{\varepsilon^2}\left(n+\log\frac1\delta\right)\right)
+	    T=O\left(\frac{1}{\varepsilon^2}\left(n+\log\frac1\delta\right)\right)
     	$$
     	samples to guarantee $d_{\mathrm{TV}}(p,\hat p)\le\varepsilon$ with probability at least $1-\delta$.
     
@@ -483,12 +479,10 @@
     $$
     R(h)=\Pr(h(X)\ne C(X)),\quad X\sim\mu.
     $$
-    
     给定任意学习算法 $\mathcal{A}$ 和任意偶数大小有限特征空间 $\mathcal{X}\subseteq\mathbb{R}^d$，其中 $|\mathcal{X}|=2m>4$。请证明存在函数 $C:\mathcal{X}\to\{0,1\}$ 和分布 $\mu$，使得
     $$
     \Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
     $$
-    
     证明中可采用如下随机构造：令 $\mu$ 为 $\mathcal{X}$ 上均匀分布；对每个 $x\in\mathcal{X}$，独立均匀随机取 $Y_x\in\{0,1\}$，并定义随机函数 $C(x)=Y_x$。
     
     1. 先在随机标签 $\{Y_x\}_{x\in\mathcal{X}}$ 与随机样本 $S_m$ 上证明
@@ -503,7 +497,6 @@
     	$$
     	\Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
     	$$
-    
 === "English"
     In binary classification, given a sample set
     $$
@@ -517,12 +510,10 @@
     $$
     R(h)=\Pr(h(X)\ne C(X)),\quad X\sim\mu.
     $$
-    
     Given any learning algorithm $\mathcal{A}$ and any finite feature space $\mathcal{X}\subseteq\mathbb{R}^d$ with even size $|\mathcal{X}|=2m>4$, prove that there exist a target function $C:\mathcal{X}\to\{0,1\}$ and a distribution $\mu$ such that
     $$
     \Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
     $$
-    
     You may use the following random construction: let $\mu$ be uniform on $\mathcal{X}$; for each $x\in\mathcal{X}$, independently sample $Y_x\in\{0,1\}$ uniformly and define $C(x)=Y_x$.
     
     1. First prove over random labels $\{Y_x\}_{x\in\mathcal{X}}$ and random sample $S_m$ that
@@ -537,5 +528,4 @@
     	$$
     	\Pr\big(R(\mathcal{A}(\cdot,S_m))\ge1/8\big)\ge1/8.
     	$$
-    
 --8<-- "solutions/chapter_01/problems/problem_no_free_lunch.md"
